@@ -10,7 +10,8 @@ jobs:
   build-aseprite:
     name: Build Aseprite
     runs-on: ${{ matrix.os }}
-    environment: build
+    env:
+      ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
     strategy:
        matrix:
          os: [windows-latest]
