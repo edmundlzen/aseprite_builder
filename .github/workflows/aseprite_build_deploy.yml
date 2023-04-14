@@ -53,6 +53,7 @@ jobs:
 
     build-aseprite:
         name: Build Aseprite
+        needs: check-version
         runs-on: ${{ matrix.os }}
         env:
             ACTIONS_ALLOW_UNSECURE_COMMANDS: "true"
